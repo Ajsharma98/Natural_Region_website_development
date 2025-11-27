@@ -1,0 +1,55 @@
+/* src/styles.css */
+
+/* Leaflet base styles (imported here rather than in index.html)
+   These are required for the map to render correctly */
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* top control bar */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+}
+
+/* map area */
+.map-wrap {
+  flex: 1;
+  position: relative;
+}
+
+/* the Leaflet container must have explicit height */
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* legend */
+.legend {
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+  font-size: 12px;
+}
+.legend .swatch {
+  display:inline-block;
+  width:18px;
+  height:12px;
+  margin-right:6px;
+  vertical-align:middle;
+}
